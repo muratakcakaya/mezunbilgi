@@ -28,7 +28,6 @@
                 <th>ID</th>
                 <th>Name</th>
                 <th>Email</th>
-                <th>Password</th>
                 <th>Mezuniyet Yılı</th>
                 <th>Mezuniyet Bolum</th>
             </tr>
@@ -37,7 +36,6 @@
                     <td><c:out value="${user.id}" /></td>
                     <td><c:out value="${user.name}" /></td>
                     <td><c:out value="${user.email}" /></td>
-                    <td><c:out value="${user.password}" /></td>
                     <td><c:out value="${user.mYil}" /></td>
                     <td><c:out value="${user.mBol}" /></td>
                 </tr>
