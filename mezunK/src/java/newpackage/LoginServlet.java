@@ -44,12 +44,20 @@ public class LoginServlet extends HttpServlet {
             String lpass =request.getParameter("password");
             System.out.println("email:"+lemail);
             System.out.println("password:"+lpass);
+
             UserDatabase db = new UserDatabase(ConnectionPro.getConnection());
             User user = db.logUser(lemail, lpass);
             if(user!=null) {
                 HttpSession session = request.getSession();
                 session.setAttribute("logUser", user);
-                response.sendRedirect("welcome.jsp");
+                String kRol= user.getkRol();
+                System.out.println("Kullanıcı Rol: "+kRol);
+                if (kRol.equals("admin")){
+                    response.sendRedirect("welcome_Admin.jsp");
+                }else{
+                    response.sendRedirect("welcome_User.jsp");
+                }
+                
             } else {
                 out.print("Kullanıcı Bulunamadı");
             }

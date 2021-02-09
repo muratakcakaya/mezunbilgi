@@ -12,7 +12,7 @@ public class User {
     String password;
     String mYil;
     String mBol;
-
+    String kRol;
    public User(){
        
    }
@@ -24,12 +24,13 @@ public class User {
         this.password = password;
     }
 
-    public User(String name, String email, String password,String mYil,String mBol) {
+    public User(String name, String email, String password,String mYil,String mBol,String kRol) {
         this.name = name;
         this.email = email;
         this.password = password;
         this.mYil = mYil;
         this.mBol = mBol;
+        this.kRol=kRol;
     }
 
     public User(String email, String password) {
@@ -81,5 +82,13 @@ public class User {
      public String getmBol() {
         return mBol;
     }
-    
+     public void setkRol(String kRol) {
+        this.kRol=kRol;
+    }
+     
+     public String getkRol() {
+        return kRol;
+    }
+     
+     
 }

@@ -22,7 +22,7 @@
     </sql:query>
      
     <div align="center">
-        <table border="1" cellpadding="6">
+        <table border="1" cellpadding="5">
             <caption><h2>USER LİSTESİ</h2></caption>
             <tr>
                 <th>ID</th>

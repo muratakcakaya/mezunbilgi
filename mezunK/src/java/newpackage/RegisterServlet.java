@@ -29,8 +29,9 @@ String email = request.getParameter("email");
 String password = request.getParameter("password"); 
 String mYil = request.getParameter("mYil");
 String mBol = request.getParameter("mBol");
+String kRol = request.getParameter("kRol");
 //make user object
-User userModel = new User(name, email, password,mYil,mBol);
+User userModel = new User(name, email, password,mYil,mBol,kRol);
 
 //create a database model
 UserDatabase regUser = new UserDatabase(ConnectionPro.getConnection());

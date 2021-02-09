@@ -16,7 +16,7 @@ public class UserDatabase {
         boolean set = false;
         try{
             //Insert register data to database
-            String query = "insert into user(name,email,password,mYil,mBol) values(?,?,?,?,?)";
+            String query = "insert into user(name,email,password,mYil,mBol,kRol) values(?,?,?,?,?,'kullanici')";
            PreparedStatement pt = this.con.prepareStatement(query);
            pt.setString(1, user.getName());
            pt.setString(2, user.getEmail());
@@ -46,10 +46,15 @@ public class UserDatabase {
                 user.setPassword(rs.getString("password"));
                 user.setmYil(rs.getString("mYil"));
                 user.setmBol(rs.getString("mBol"));
+                user.setkRol(rs.getString("kRol"));
             }
         }
         catch (SQLException e) {
         }
         return user;
+    }
+
+    void deleteUser(String id) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
  }
